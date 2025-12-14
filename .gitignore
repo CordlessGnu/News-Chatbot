@@ -205,3 +205,22 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Rasa
+models/*
+.rasa/
+/dialogue_state_tracker
+/actions/__pycache__
+*.env
+.env
+secrets.yml
+credentials.yml
+/venv/
+/env/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+logs/
+Thumbs.db
+.DS_Store
