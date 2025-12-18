@@ -1,0 +1,57 @@
+version: "3.1"
+
+stories:
+
+- story: say hello
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: say goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- story: news request (general)
+  steps:
+    - intent: tell_news
+    - action: action_get_news
+
+- story: news request (specific event)
+  steps:
+    - intent: tell_news
+      entities:
+        - event: "football"
+    - slot_was_set:
+        - event: "football"
+    - action: action_get_news
+
+- story: specific news after a greeting
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_news
+      entities:
+        - event: "tech conference"
+    - slot_was_set:
+        - event: "tech conference"
+    - action: action_get_news
+
+- story: user asks news then says goodbye
+  steps:
+    - intent: tell_news
+    - action: action_get_news
+    - intent: goodbye
+    - action: utter_goodbye    
+
+- story: user asks news then says goodbye
+  steps:
+    - intent: tell_news
+    - action: action_get_news
+    - intent: goodbye
+    - action: utter_goodbye

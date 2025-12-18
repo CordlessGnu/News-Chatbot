@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tell_news
+  examples: |
+    - what is the news today?
+    - tell me about the [latest](event) news
+    - any news on [politics](event)?
+    - what's new with [finance](event)?
+    - what is happening with the [football](event) match?
+    - give me the [sports](event) headlines
+    - I want to know about [space](event) exploration
+    - what's the news
+    - can you tell me the news
+    - get me news about [technology](event)
+    - news please

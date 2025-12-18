@@ -1,0 +1,32 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - tell_news
+  - bot_challenge
+
+entities:
+  - event
+
+slots:
+  event:
+    type: text
+    influence_conversation: true
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_get_news
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
